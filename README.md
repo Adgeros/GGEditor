@@ -1,121 +1,108 @@
-English | [简体中文](README.zh-CN.md)
+[English](README.en-US.md) | 简体中文
 
-# GGEditor
+<h1 align="center">GGEditor</h1>
 
-![language](https://img.shields.io/badge/language-react-red.svg) [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gaoli/GGEditor/blob/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/gg-editor.svg)](https://www.npmjs.com/package/gg-editor)
-[![npm downloads](https://img.shields.io/npm/dm/gg-editor.svg)](https://www.npmjs.com/package/gg-editor)
+<div align="center">
 
-A visual graph editor based on [G6](https://github.com/antvis/g6) and [React](https://github.com/facebook/react).
+基于 [G6](https://github.com/antvis/g6) 和 [React](https://github.com/facebook/react) 的可视化图编辑器
 
-## Demo
+[![GitHub](https://img.shields.io/github/license/alibaba/GGEditor)](LICENSE)
+[![npm](https://img.shields.io/npm/v/gg-editor)](https://www.npmjs.com/package/gg-editor)
+[![npm](https://img.shields.io/npm/dm/gg-editor)](https://www.npmjs.com/package/gg-editor)
 
-[Flow](http://ggeditor.com/demo/#/flow)
+</div>
 
-[![Flow](https://img.alicdn.com/tfs/TB1cl0LyAzoK1RjSZFlXXai4VXa-800-407.gif)](http://ggeditor.com/demo/#/flow)
-
-[Mind](http://ggeditor.com/demo/#/mind)
-
-[![Mind](https://img.alicdn.com/tfs/TB1Qed2yxjaK1RjSZFAXXbdLFXa-800-467.gif)](http://ggeditor.com/demo/#/mind)
-
-[Koni](http://ggeditor.com/demo/#/koni)
-
-[<img src="https://img.alicdn.com/tfs/TB1vWxUyAvoK1RjSZFwXXciCFXa-1920-1003.png" alt="Koni" width="800">](http://ggeditor.com/demo/#/koni)
-
-## Installation
+## 安装
 
 ### npm
 
-```sh
-npm install --save gg-editor
+```bash
+npm install gg-editor --save
 ```
 
 ### umd
 
 ```html
-<script src="https://unpkg.com/gg-editor@${version}/dist/bundle.js"></script>
+<script src="https://unpkg.com/gg-editor@${version}/dist/index.js"></script>
 ```
 
-### run demo
+## 使用
 
-```sh
-$ git clone https://github.com/gaoli/GGEditor.git
-$ cd gg-editor
-$ npm install
-$ npm start
-```
+### 流程图
 
-## Usage
-
-### Flow
+[![Edit GGEditor - Flow](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ggeditor-flow-hq64m?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import GGEditor, { Flow } from 'gg-editor';
 
 const data = {
-  nodes: [{
-    type: 'node',
-    size: '70*70',
-    shape: 'flow-circle',
-    color: '#FA8C16',
-    label: '起止节点',
-    x: 55,
-    y: 55,
-    id: 'ea1184e8',
-    index: 0,
-  }, {
-    type: 'node',
-    size: '70*70',
-    shape: 'flow-circle',
-    color: '#FA8C16',
-    label: '结束节点',
-    x: 55,
-    y: 255,
-    id: '481fbb1a',
-    index: 2,
-  }],
-  edges: [{
-    source: 'ea1184e8',
-    sourceAnchor: 2,
-    target: '481fbb1a',
-    targetAnchor: 0,
-    id: '7989ac70',
-    index: 1,
-  }],
+  nodes: [
+    {
+      id: '0',
+      label: 'Node',
+      x: 55,
+      y: 55,
+    },
+    {
+      id: '1',
+      label: 'Node',
+      x: 55,
+      y: 255,
+    },
+  ],
+  edges: [
+    {
+      label: 'Label',
+      source: '0',
+      target: '1',
+    },
+  ],
 };
 
 <GGEditor>
   <Flow style={{ width: 500, height: 500 }} data={data} />
-</GGEditor>
+</GGEditor>;
 ```
 
-### Mind
+### 脑图
+
+[![Edit GGEditor - Mind](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ggeditor-mind-2262q?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import GGEditor, { Mind } from 'gg-editor';
 
 const data = {
-  roots: [{
-    label: '中心主题',
-    children: [{
-      label: '分支主题 1',
-    }, {
-      label: '分支主题 2',
-    }, {
-      label: '分支主题 3',
-    }],
-  }],
+  label: 'Central Topic',
+  children: [
+    {
+      label: 'Main Topic 1',
+    },
+    {
+      label: 'Main Topic 2',
+    },
+    {
+      label: 'Main Topic 3',
+    },
+  ],
 };
 
 <GGEditor>
   <Mind style={{ width: 500, height: 500 }} data={data} />
-</GGEditor>
+</GGEditor>;
 ```
 
-## Documentation
+## 示例
 
-* [API](/docs/README.md#api)
+```bash
+# 克隆仓库
+$ git clone https://github.com/alibaba/GGEditor.git
 
-## DingTalk Group
+# 切换目录
+$ cd gg-editor
 
-[<img src="https://img.alicdn.com/tfs/TB1AWhRywHqK1RjSZJnXXbNLpXa-1242-1602.jpg" alt="DingTalk Group" width="200">](https://qr.dingtalk.com/action/joingroup?code=v1,k1,PSFRQbatttuFXEJhDNG1P4CMMUI1+sUDO5MZr3gjhqk=&_dt_no_comment=1&origin=11)
+# 安装依赖
+$ npm install
+
+# 运行示例
+$ npm start
+```

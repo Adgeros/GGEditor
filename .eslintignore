@@ -1,4 +1,6 @@
-es
-cjs
-dist
-scripts
+/dist
+/lib
+/es
+
+/examples/dist
+/node_modules
