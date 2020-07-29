@@ -1,6 +1,6 @@
 {
   "name": "gg-editor",
-  "version": "3.1.1",
+  "version": "3.1.3",
   "description": "A visual graph editor based on G6 and React",
   "keywords": [
     "react",
@@ -52,11 +52,12 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@antv/g6": "^3.4.3",
+    "@antv/g6": "3.5.2",
     "@babel/runtime": "^7.7.6",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
+    "@antv/g6": "^3.5.0",
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
     "@babel/plugin-transform-runtime": "^7.7.6",

@@ -1,3 +1,16 @@
+## [3.1.3](https://github.com/alibaba/GGEditor/compare/3.1.2...3.1.3) (2020-07-10)
+
+### Bug Fixes
+
+- fix `onAfterConnect` event ([a704aec](https://github.com/alibaba/GGEditor/commit/a704aec5a115020980f88231b1dd3c6442380fdb))
+
+## [3.1.2](https://github.com/alibaba/GGEditor/compare/3.1.1...3.1.2) (2020-06-11)
+
+### Bug Fixes
+
+- fix for getting of recall edges ([bb7005c](https://github.com/alibaba/GGEditor/commit/bb7005cea51c7faef500e124fe4f5bfa84416910)), closes [#489](https://github.com/alibaba/GGEditor/issues/489)
+- update type assertion ([f2eb776](https://github.com/alibaba/GGEditor/commit/f2eb776c30d69d2a3e76734433ae1e838087ed19))
+
 ## [3.1.1](https://github.com/alibaba/GGEditor/compare/3.1.0...3.1.1) (2020-04-22)
 
 ### Bug Fixes
